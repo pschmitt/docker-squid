@@ -1,7 +1,7 @@
 FROM alpine:3.4
 
 RUN apk add --no-cache squid && \
-    touch /var/run/squid.pid && chown squid /var/run/squid.pid
+    echo "pid_filename /tmp/suid.pid"
 
 USER squid
 
